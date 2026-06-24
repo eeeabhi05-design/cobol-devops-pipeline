@@ -24,7 +24,7 @@
            DISPLAY 'MULTIPLICATION: ' RESULT
 
            DISPLAY '================================'
-           DISPLAY 'PROGRAM COMPLETE - ABHISAM'
+           DISPLAY 'PROGRAM COMPLETE - ABHISAMV233'
            DISPLAY '================================'
 
            STOP RUN.
