@@ -6,9 +6,10 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Print COBOL File') {
+        stage('Print COBOL Files') {
             steps {
                 bat 'type hello.cbl'
+                bat 'type calculator.cbl'
             }
         }
     }
