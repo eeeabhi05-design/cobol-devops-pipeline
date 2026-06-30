@@ -2,4 +2,4 @@
        PROGRAM-ID. CALCULATOR2.
        PROCEDURE DIVISION.
            DISPLAY 'CALCULATOR 2 TEST'.
-           STOP RUN.      *test
+           STOP RUN.         *test

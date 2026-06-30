@@ -43,7 +43,7 @@ pipeline {
                                 .replace('.cbl', '')
                                 .toUpperCase()
                             echo "Uploading ${file} to Z86348.COBOL(${memberName})..."
-                            bat "zowe zos-files upload file-to-data-set ${file} \"Z86348.COBOL(${memberName})\""
+                            bat "C:\\Users\\ABHISAM\\AppData\\Roaming\\npm\\zowe.cmd zos-files upload file-to-data-set ${file} \"Z86348.COBOL(${memberName})\""
                             echo "Mainframe updated successfully!"
                         }
                     }
