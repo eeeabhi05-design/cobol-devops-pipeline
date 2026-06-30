@@ -32,5 +32,23 @@ pipeline {
                 }
             }
         }
+        stage('Upload to Mainframe') {
+            steps {
+                script {
+                    def files = env.CHANGED_FILES.split('\n')
+                    files.each { file ->
+                        file = file.trim()
+                        if (file.endsWith('.cbl')) {
+                            def memberName = file
+                                .replace('.cbl', '')
+                                .toUpperCase()
+                            echo "Uploading ${file} to Z86348.COBOL(${memberName})..."
+                            bat "zowe zos-files upload file-to-data-set ${file} \"Z86348.COBOL(${memberName})\""
+                            echo "Mainframe updated successfully!"
+                        }
+                    }
+                }
+            }
+        }
     }
 }
